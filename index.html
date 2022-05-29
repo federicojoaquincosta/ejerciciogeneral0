@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div style="display: grid; place-items:center">
+    
+        <div id="producto_1"> <img width=100px height=100px src="https://www.distribuidorapop.com.ar/wp-content/uploads/2019/05/galletitas-oreo-venta-ml-768x768.jpg" alt="Oreo"></div>
+        <br>
+        <input type="number" id="num_prod_1"placeholder="Oreos a Comprar">
+        <br>
+        <h4> Precio unitario $100 </h4>
+        <button onclick="agregarOreos()">Agregar al carrito</button>
+        <br>
+        <div id="producto_2"><img width=100px height=100px src="https://www.distribuidorapop.com.ar/wp-content/uploads/2019/05/galletitas-don-satur-grasa-ml.jpg" alt=""></div>
+        <br>
+        <input type="number" id="num_prod_2"placeholder="Don Satur a comprar">
+        <br>
+        <h4> Precio unitario $90 </h4>
+        <br>
+        <button onclick="agregarDonSatur()">Agregar al carrito</button>
+        <br>
+        <div id="producto_3"><img width=100px height=100px src="https://jumboargentina.vtexassets.com/arquivos/ids/197414/Galletitas-Granix-Frutigran-Galletitas-Frutigran-Con-Chips-De-Chocolate-255-Gr-1-33785.jpg" alt=""></div>
+        <br>
+        <input type="number" id="num_prod_3"placeholder="Frutigran a comprar">
+        <br>
+        <h4> Precio unitario $200</h4>
+        <br>
+        <button onclick="agregarFrutigran()">Agregar al carrito</button>
+        <br>
+        <select name="Opciones de pago" id="opcion_pago">
+            <option value="0" id="0">Pago en efectivo</option>
+            <option value="1" id="1">Tarjeta de crédito en una cuota</option>
+            <option value="3" id="3">Tarjeta de crédito en tres cuotas</option>
+            <option value="6" id="6">Tarjeta de crédito en seis cuotas</option>
+        </select>
+        <br>
+        <button onclick="comprar()">Finalizar compra</button>
+        <br>
+        <div id="info_compra">
+
+        </div>
+        
+   
+    
+    
+    
+    
+    </div>
+
+    <script src="ejerciciogeneral0.js"></script>
+</body>
+</html>
