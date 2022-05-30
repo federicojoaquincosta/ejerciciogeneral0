@@ -11,10 +11,13 @@
     
         <div id="producto_1"> <img width=100px height=100px src="https://www.distribuidorapop.com.ar/wp-content/uploads/2019/05/galletitas-oreo-venta-ml-768x768.jpg" alt="Oreo"></div>
         <br>
-        <input type="number" id="num_prod_1"placeholder="Oreos a Comprar">
+        <input type="number" id="num_prod_1"placeholder="Oreo a Comprar">
         <br>
         <h4> Precio unitario $100 </h4>
         <button onclick="agregarOreos()">Agregar al carrito</button>
+        <br>
+        <div id="oreo_agregadas">
+        </div>
         <br>
         <div id="producto_2"><img width=100px height=100px src="https://www.distribuidorapop.com.ar/wp-content/uploads/2019/05/galletitas-don-satur-grasa-ml.jpg" alt=""></div>
         <br>
@@ -24,6 +27,9 @@
         <br>
         <button onclick="agregarDonSatur()">Agregar al carrito</button>
         <br>
+        <div id="donsatur_agregadas">
+        </div>
+        <br>
         <div id="producto_3"><img width=100px height=100px src="https://jumboargentina.vtexassets.com/arquivos/ids/197414/Galletitas-Granix-Frutigran-Galletitas-Frutigran-Con-Chips-De-Chocolate-255-Gr-1-33785.jpg" alt=""></div>
         <br>
         <input type="number" id="num_prod_3"placeholder="Frutigran a comprar">
@@ -31,6 +37,9 @@
         <h4> Precio unitario $200</h4>
         <br>
         <button onclick="agregarFrutigran()">Agregar al carrito</button>
+        <br>
+        <div id="frutigran_agregadas">
+        </div>
         <br>
         <select name="Opciones de pago" id="opcion_pago">
             <option value="0" id="0">Pago en efectivo</option>
@@ -42,6 +51,8 @@
         <button onclick="comprar()">Finalizar compra</button>
         <br>
         <div id="info_compra">
+
+            
 
         </div>
         

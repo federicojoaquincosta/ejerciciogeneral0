@@ -15,18 +15,27 @@ function agregarOreos() {
     cantidadOreos = Number(document.querySelector("#num_prod_1").value)
     precioTotalOreos = Number(document.querySelector("#num_prod_1").value) * PRECIO_OREO;
     productosTotales += cantidadOreos;
+    document.querySelector("#oreo_agregadas").innerHTML = `
+    <input type="checkbox" checked name="" id=""> ${cantidadOreos} Oreo agregadas al carrito
+    `
 }
 
 function agregarDonSatur() {
     cantidadDonSatur = Number(document.querySelector("#num_prod_2").value)
     precioTotalDonSatur = Number(document.querySelector("#num_prod_2").value) * PRECIO_DON_SATUR;
     productosTotales += cantidadDonSatur;
+    document.querySelector("#donsatur_agregadas").innerHTML = `
+    <input type="checkbox" checked name="" id=""> ${cantidadDonSatur} Don Satur agregadas al carrito
+    `
 }
 
 function agregarFrutigran() {
     cantidadFrutigran = Number(document.querySelector("#num_prod_3").value)
     precioTotalFrutigran = Number(document.querySelector("#num_prod_3").value) * PRECIO_FRUTIGRAN;
     productosTotales += cantidadFrutigran;
+    document.querySelector("#frutigran_agregadas").innerHTML = `
+    <input type="checkbox" checked name="" id=""> ${cantidadFrutigran} Frutigran agregadas al carrito
+    `
 }
 
 
