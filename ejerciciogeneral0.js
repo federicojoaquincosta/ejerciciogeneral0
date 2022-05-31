@@ -12,6 +12,7 @@ let formaPago = 0;
 let productosTotales = 0;
 
 function agregarOreos() {
+    productosTotales = cantidadDonSatur + cantidadFrutigran;
     cantidadOreos = Number(document.querySelector("#num_prod_1").value)
     precioTotalOreos = Number(document.querySelector("#num_prod_1").value) * PRECIO_OREO;
     productosTotales += cantidadOreos;
@@ -21,6 +22,7 @@ function agregarOreos() {
 }
 
 function agregarDonSatur() {
+    productosTotales = cantidadOreos + cantidadFrutigran;
     cantidadDonSatur = Number(document.querySelector("#num_prod_2").value)
     precioTotalDonSatur = Number(document.querySelector("#num_prod_2").value) * PRECIO_DON_SATUR;
     productosTotales += cantidadDonSatur;
@@ -30,6 +32,7 @@ function agregarDonSatur() {
 }
 
 function agregarFrutigran() {
+    productosTotales = cantidadDonSatur + cantidadOreos;
     cantidadFrutigran = Number(document.querySelector("#num_prod_3").value)
     precioTotalFrutigran = Number(document.querySelector("#num_prod_3").value) * PRECIO_FRUTIGRAN;
     productosTotales += cantidadFrutigran;
