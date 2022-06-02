@@ -110,6 +110,12 @@ function comprar() {
         <h3></h3>
         `
     } else if (formaPago == 3 && productosTotales < 3) {
+        document.querySelector("#mostrar_oreo").innerHTML = `
+        `
+        document.querySelector("#mostrar_donsatur").innerHTML = `
+        `
+        document.querySelector("#mostrar_frutigran").innerHTML = `
+        `
         document.querySelector("#info_compra").innerHTML = `
         <h3>Deberá comprar 3 productos o más para pagar en 3 cuotas</h3>
         `
@@ -129,6 +135,12 @@ function comprar() {
         <h3>5% de aumento</h3>
         `
     } else if (formaPago == 6 && productosTotales < 8) {
+        document.querySelector("#mostrar_oreo").innerHTML = `
+        `
+        document.querySelector("#mostrar_donsatur").innerHTML = `
+        `
+        document.querySelector("#mostrar_frutigran").innerHTML = `
+        `
         document.querySelector("#info_compra").innerHTML = `
         <h3>Deberá comprar 8 productos o más para pagar en 6 cuotas</h3>
         `
