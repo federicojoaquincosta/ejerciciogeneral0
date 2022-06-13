@@ -56,12 +56,14 @@
                 Pagando en efectivo obtendrá un 20% de descuento.
             </h4>
         </div>
-        <select name="Opciones de pago" id="opcion_pago">
+        <select onchange="mostrarOpciones()" name="Opciones de pago" id="opcion_pago">
             <option value="0" id="0">Pago en efectivo</option>
-            <option value="1" id="1">Tarjeta de crédito en una cuota</option>
+            <option value="1" id="1">Tarjeta de crédito</option>
         </select>
         <br>
-        <div id="num_cuotas"></div>
+        <div id="num_cuotas">
+            
+        </div>
         <br>
         <button onclick="comprar()">Finalizar compra</button>
         <br>

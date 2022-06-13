@@ -10,7 +10,7 @@ const PRECIO_FRUTIGRAN = 200;
 let precioFinal = 0;
 let formaPago = 0;
 let productosTotales = 0;
-
+let efecOtarj = 0;
 
 
 function printOreo() {
@@ -43,19 +43,36 @@ function printFrutigran() {
     }
 }
 
+function mostrarOpciones(){
+efecOtarj = document.querySelector("#opcion_pago").value;
+
+if (efecOtarj == 1) {
+    document.querySelector("#num_cuotas").innerHTML = `
+    <select name="" id="select_cuotas">
+                <option value="1" id="1">Tarjeta de crédito en una cuota</option>
+            </select>
+    `
+} else {
+    document.querySelector("#num_cuotas").innerHTML = ``
+}
+renderizar();
+}
+
 function renderizar() {
-    if (productosTotales > 7) {
-        document.querySelector("#opcion_pago").innerHTML = `
-        <option value="0" id="0">Pago en efectivo</option>
+    if (productosTotales > 7 && efecOtarj == 1) {
+        document.querySelector("#num_cuotas").innerHTML = `
+        <select name="" id="select_cuotas">
         <option value="1" id="1">Tarjeta de crédito en una cuota</option>
         <option value="3" id="3">Tarjeta de crédito en tres cuotas</option>
         <option value="6" id="6">Tarjeta de crédito en seis cuotas</option>
+        </select>
         `
-    } else if (productosTotales > 3 && productosTotales < 8) {
-        document.querySelector("#opcion_pago").innerHTML = `
-        <option value="0" id="0">Pago en efectivo</option>
+    } else if (productosTotales > 2 && productosTotales < 8 && efecOtarj == 1) {
+        document.querySelector("#num_cuotas").innerHTML = `
+        <select name="" id="select_cuotas">
         <option value="1" id="1">Tarjeta de crédito en una cuota</option>
         <option value="3" id="3">Tarjeta de crédito en tres cuotas</option>
+        </select>
         `
     }
 
@@ -105,7 +122,12 @@ function agregarFrutigran() {
 
 function comprar() {
     precioFinal = precioTotalDonSatur + precioTotalOreos + precioTotalFrutigran;
+    efecOtarj = document.querySelector("#opcion_pago").value;
+    if (efecOtarj == 0) {
     formaPago = document.querySelector("#opcion_pago").value;
+    } else if (efecOtarj == 1) {
+        formaPago = document.querySelector("#select_cuotas").value;
+    }
 
     if (formaPago == 0 && productosTotales > 0) {
         precioFinal = precioFinal - (precioFinal * 0.2);
