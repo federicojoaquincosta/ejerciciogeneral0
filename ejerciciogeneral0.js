@@ -11,6 +11,8 @@ let precioFinal = 0;
 let formaPago = 0;
 let productosTotales = 0;
 
+
+
 function printOreo() {
     if (cantidadOreos > 0) {
         document.querySelector("#mostrar_oreo").innerHTML = `
@@ -41,6 +43,28 @@ function printFrutigran() {
     }
 }
 
+function renderizar() {
+    if (productosTotales > 7) {
+        document.querySelector("#opcion_pago").innerHTML = `
+        <option value="0" id="0">Pago en efectivo</option>
+        <option value="1" id="1">Tarjeta de crédito en una cuota</option>
+        <option value="3" id="3">Tarjeta de crédito en tres cuotas</option>
+        <option value="6" id="6">Tarjeta de crédito en seis cuotas</option>
+        `
+    } else if (productosTotales > 3 && productosTotales < 8) {
+        document.querySelector("#opcion_pago").innerHTML = `
+        <option value="0" id="0">Pago en efectivo</option>
+        <option value="1" id="1">Tarjeta de crédito en una cuota</option>
+        <option value="3" id="3">Tarjeta de crédito en tres cuotas</option>
+        `
+    }
+
+}
+
+
+
+
+
 function agregarOreos() {
     productosTotales = cantidadDonSatur + cantidadFrutigran;
     cantidadOreos = Number(document.querySelector("#num_prod_1").value)
@@ -48,7 +72,8 @@ function agregarOreos() {
     productosTotales += cantidadOreos;
     document.querySelector("#oreo_agregadas").innerHTML = `
     <input type="checkbox" checked name="" id=""> ${cantidadOreos} Oreo agregadas al carrito
-    `
+    `;
+    renderizar();
 }
 
 function agregarDonSatur() {
@@ -58,7 +83,8 @@ function agregarDonSatur() {
     productosTotales += cantidadDonSatur;
     document.querySelector("#donsatur_agregadas").innerHTML = `
     <input type="checkbox" checked name="" id=""> ${cantidadDonSatur} Don Satur agregadas al carrito
-    `
+    `;
+    renderizar();
 }
 
 function agregarFrutigran() {
@@ -68,7 +94,8 @@ function agregarFrutigran() {
     productosTotales += cantidadFrutigran;
     document.querySelector("#frutigran_agregadas").innerHTML = `
     <input type="checkbox" checked name="" id=""> ${cantidadFrutigran} Frutigran agregadas al carrito
-    `
+    `;
+    renderizar();
 }
 
 
